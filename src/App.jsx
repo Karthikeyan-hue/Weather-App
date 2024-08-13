@@ -17,7 +17,7 @@ function App() {
 
   function apidata(){
 
-    const api = axios(`https://api.openweathermap.org/data/2.5/weather?q=${changeText}&appid=3eea2290fec33117656bcbb453dc1a95`)
+    const api = axios(`https://api.openweathermap.org/data/2.5/weather?q=${changeText}&appid=3eea2290fec33117656bcbb453dc1a95&units=metric`)
 
     api.then(
       function(dataapi){
@@ -47,7 +47,7 @@ function App() {
             <h1 className="text-5xl font-[Poppins] font-medium text-gray-800 pt-5">{cityName}</h1>
             <div className="flex gap-3">
               <img src="https://ik.imagekit.io/c3q3h7pex/Weather-App/Sun%20and%20Rain.png?updatedAt=1723217478428" alt="Weather-img" className="w-14"/>
-              <p className="text-4xl font-[Poppins] font-medium text-blue-500">{temp}</p>
+              <p className="text-4xl font-[Poppins] font-medium text-blue-500">{temp} °C</p>
             </div>
             <div className="flex flex-row justify-center items-center gap-4 mt-4 bg-blue-500 w-[400px] h-[70px] rounded-md hover:outline ">
               <img src="https://ik.imagekit.io/c3q3h7pex/Weather-App/Sun.png?updatedAt=1723217478326" alt="Weather-img" className="w-14"/>
